@@ -1,57 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ae854b2-c59d-4ac4-aa0e-2871b151473b" name="Default Changelist" comment="first step">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shopping-cart.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Components/Product.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/images/dres01-marsh-net_1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/images/dress1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/images/dress2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/images/dress3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/images/dress4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/images/dress5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/images/qvc-maternity-dress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../yarn.lock" beforeDir="false" />
+    <list default="true" id="7ae854b2-c59d-4ac4-aa0e-2871b151473b" name="Default Changelist" comment="product component">
+      <change afterPath="$PROJECT_DIR$/src/Components/Filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,8 +56,17 @@
       <workItem from="1615031424821" duration="3956000" />
       <workItem from="1615103027042" duration="14363000" />
       <workItem from="1615127950629" duration="413000" />
-      <workItem from="1615128538105" duration="4290000" />
+      <workItem from="1615128538105" duration="4612000" />
+      <workItem from="1615192317393" duration="4113000" />
     </task>
+    <task id="LOCAL-00001" summary="product component">
+      <created>1615133111200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615133111200</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,5 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="product component" />
+    <option name="LAST_COMMIT_MESSAGE" value="product component" />
   </component>
 </project>

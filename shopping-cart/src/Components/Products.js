@@ -8,7 +8,7 @@ function Products({products}) {
                     return <li key={product._id}>
                         <div className="product">
                             <a href={'#'+product._id}>
-                                <div className="product-back">{product.availableSizes }</div>
+                                <div className="product-back">{product.availableSizes+ ' ' }</div>
                                 <img src={product.image} alt={product.title}/>
                                 <p>{product.title}</p>
                             </a>
