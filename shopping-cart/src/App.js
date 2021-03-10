@@ -2,39 +2,53 @@ import React, {useState} from "react";
 import data from './data.json'
 import Products from "./Components/Products";
 import Filter from "./Components/Filter";
+import Cart from "./Components/cart";
 
 function App() {
 
-    const [state, setState] = useState({
-        products: data.products,
-        sort: '',
-        size: ''
-    });
+    const [state, setState] = useState(data.products);
+    const [sort, setSort] = useState('');
+    const [size, setSize] = useState('');
+    const [cartItems, setCartItems] = useState([]);
 
+    const addToCart = (product) => {
+      const value = cartItems.find(item =>{
+         return item.id === product.id
+      })
+       if(value){
+           const filtered = cartItems.filter(cartItem =>{
+             return cartItem.id !== product.id
+           })
+           product.count = product.count + 1;
+           setCartItems([...filtered,product])
+           //console.log(cartItems)
+       }else{
+           product.count = 1;
+         setCartItems([...cartItems,product])
+       }
+    };
+   console.log(cartItems)
     const sortProduct = (e) => {
-        setState((state) => ({
-            sort: e.target.value,
-            products: state.products.sort((a, b) => (
+        setSort(e.target.value);
+        setState((state) => (
+            state.slice().sort((a, b) => (
                 e.target.value === 'lowest' ?
                     ((a.price > b.price) ? 1 : -1) :
                     e.target.value === 'highest' ?
                         ((a.price < b.price) ? 1 : -1) :
-                        ((a._id > b._id) ? 1 : -1)
-
+                        ((a.id > b.id) ? 1 : -1)
             ))
-        }))
-    }
+        ));
+    };
 
     const filterProduct = (e) => {
         if (e.target.value === '') {
-            setState({...state, products: data.products})
+            setState(data.products)
         } else {
-            setState({
-                size: e.target.value,
-                products: data.products.filter((product) => {
-                    return product.availableSizes.indexOf(e.target.value) >= 0
-                })
-            })
+            setSize(e.target.value)
+            setState(state.filter((product) => {
+                return product.availableSizes.indexOf(e.target.value) >= 0;
+            }))
         }
     }
 
@@ -46,11 +60,13 @@ function App() {
             <main>
                 <div className="content">
                     <div className="main">
-                        <Filter count={state.products.length} size={state.size} sort={state.sort}
+                        <Filter size={size} sort={sort}
                                 sortProduct={sortProduct} filterProduct={filterProduct}/>
-                        <Products products={state.products}/>
+                        <Products products={state} addToCart={addToCart}/>
                     </div>
-                    <div className="sidebar">sidebar</div>
+                    <div className="sidebar">
+                        <Cart cartItems={cartItems}/>
+                    </div>
                 </div>
             </main>
             <footer>All Right Reserved</footer>
