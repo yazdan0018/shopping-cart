@@ -1,11 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Cart = (props) => {
 
+    const [showCheckout, setShowCheckout] = useState(false)
+    const [checkout, setCheckout] = useState(
+        {
+            email: '',
+            name: '',
+            address: ''
+        }
+    );
+    const [order, setOrder] = useState({});
 
     const count = props.cartItems.reduce((accu, cur) => {
         return accu + cur.count
     }, 0)
+
+    const handleInput = (e) => {
+        e.preventDefault();
+        setCheckout({
+            ...checkout,
+            [e.target.name]: e.target.value
+        })
+    };
+
+    const createOrder = (e) => {
+        e.preventDefault();
+        const order = {
+            email: checkout.email,
+            name: checkout.name,
+            address: checkout.address,
+            cartItems: props.cartItems
+        }
+        setOrder(order);
+        props.createOrder(order)
+    }
 
     return (
         <div>
@@ -49,8 +78,41 @@ const Cart = (props) => {
                                     return accu + cur.price * cur.count
                                 }, 0))}
                             </div>
-                            <button className='btn primary'>Proceed</button>
+                            <button onClick={() => setShowCheckout(!showCheckout)} className='btn primary'>Proceed</button>
                         </div>
+                    </div>
+                )}
+                {showCheckout && (
+                    <div className="cart">
+                        <form className='form-container' onSubmit={createOrder}>
+                            <ul >
+                                <label>Email</label>
+                                <input
+                                    name='email'
+                                    type="email"
+                                    required
+                                    onChange={handleInput}/>
+                            </ul>
+                            <ul >
+                                <label>Name</label>
+                                <input
+                                    name='name'
+                                    type="text"
+                                    required
+                                    onChange={handleInput}/>
+                            </ul>
+                            <ul >
+                                <label>Address</label>
+                                <input
+                                    name='address'
+                                    type='text'
+                                    required
+                                    onChange={handleInput}/>
+                            </ul>
+                            <ul>
+                                <button className='btn primary' type='submit'>Checkout</button>
+                            </ul>
+                        </form>
                     </div>
                 )}
             </div>

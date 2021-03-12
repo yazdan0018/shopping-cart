@@ -9,13 +9,22 @@ function App() {
     const [state, setState] = useState(data.products);
     const [sort, setSort] = useState('');
     const [size, setSize] = useState('');
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState(
+        localStorage.getItem('cartItems') ?
+            JSON.parse(localStorage.getItem('cartItems'))
+            :[]
+    );
+
+    const createOrder = (order) =>{
+        alert('Need to save order for ' + order.name)
+    }
 
     const removeFromCart = (cartItem) => {
         const filtered = cartItems.filter(item => {
             return item.id !== cartItem.id
         });
         setCartItems(filtered)
+        localStorage.setItem('cartItems',JSON.stringify(filtered))
     };
 
     const addToCart = (product) => {
@@ -33,6 +42,7 @@ function App() {
            product.count = 1;
          setCartItems([...cartItems,product])
        }
+       localStorage.setItem('cartItems',JSON.stringify(cartItems))
     };
 
    console.log(cartItems)
@@ -74,7 +84,11 @@ function App() {
                         <Products products={state} addToCart={addToCart}/>
                     </div>
                     <div className="sidebar">
-                        <Cart cartItems={cartItems} removeFromCart={removeFromCart}/>
+                        <Cart
+                            cartItems={cartItems}
+                            removeFromCart={removeFromCart}
+                            createOrder={createOrder}
+                        />
                     </div>
                 </div>
             </main>

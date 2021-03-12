@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ae854b2-c59d-4ac4-aa0e-2871b151473b" name="Default Changelist" comment="cart count component">
+    <list default="true" id="7ae854b2-c59d-4ac4-aa0e-2871b151473b" name="Default Changelist" comment="cart component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/cart.js" afterDir="false" />
@@ -67,7 +67,7 @@
       <workItem from="1615318587077" duration="8028000" />
       <workItem from="1615365278875" duration="9450000" />
       <workItem from="1615454412126" duration="4333000" />
-      <workItem from="1615539919878" duration="1889000" />
+      <workItem from="1615539919878" duration="7226000" />
     </task>
     <task id="LOCAL-00001" summary="product component">
       <created>1615133111200</created>
@@ -90,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615412950365</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cart component">
+      <created>1615542039357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615542039357</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +142,7 @@
     <MESSAGE value="product component" />
     <MESSAGE value="filter component" />
     <MESSAGE value="cart count component" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart count component" />
+    <MESSAGE value="cart component" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart component" />
   </component>
 </project>
