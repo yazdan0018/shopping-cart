@@ -11,6 +11,13 @@ function App() {
     const [size, setSize] = useState('');
     const [cartItems, setCartItems] = useState([]);
 
+    const removeFromCart = (cartItem) => {
+        const filtered = cartItems.filter(item => {
+            return item.id !== cartItem.id
+        });
+        setCartItems(filtered)
+    };
+
     const addToCart = (product) => {
       const value = cartItems.find(item =>{
          return item.id === product.id
@@ -27,7 +34,9 @@ function App() {
          setCartItems([...cartItems,product])
        }
     };
+
    console.log(cartItems)
+
     const sortProduct = (e) => {
         setSort(e.target.value);
         setState((state) => (
@@ -65,7 +74,7 @@ function App() {
                         <Products products={state} addToCart={addToCart}/>
                     </div>
                     <div className="sidebar">
-                        <Cart cartItems={cartItems}/>
+                        <Cart cartItems={cartItems} removeFromCart={removeFromCart}/>
                     </div>
                 </div>
             </main>
